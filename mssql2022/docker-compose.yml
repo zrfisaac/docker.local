@@ -21,5 +21,4 @@ services:
     environment:
       - "ACCEPT_EULA=Y"
       - "SA_PASSWORD=ABcd!@34"
-    #network_mode: "host"
-    networks: ["local"]
+    network_mode: "host"

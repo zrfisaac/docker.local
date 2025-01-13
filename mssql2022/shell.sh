@@ -8,4 +8,4 @@
 
 # [ bash ]
 command -v sudo >/dev/null 2>&1 && sudo="sudo" || sudo=""
-$sudo docker exec -it main_mssql mssql -u root -p"ABcd!@34"
+$sudo docker exec -it main_mssql2022 mssql -u root -p"ABcd!@34"

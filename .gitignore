@@ -31,6 +31,8 @@
 docker/*/
 trash/*/
 virtualbox/*/
+webapps
+webapps/
 
 # : - zrfisaac
 *.Identifier

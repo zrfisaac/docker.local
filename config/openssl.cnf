@@ -394,5 +394,4 @@ oldcert = $insta::certout # insta.cert.pem
 system_default = system_default_sect
 
 [system_default_sect]
-#CipherString = :@SECLEVEL=0
-CipherString = DEFAULT@SECLEVEL=1
+CipherString = :@SECLEVEL=0
