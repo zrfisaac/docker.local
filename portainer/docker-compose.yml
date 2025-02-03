@@ -9,7 +9,7 @@
 services:
   portainer:
     image: portainer/portainer-ce:latest
-    container_name: main_portainer
+    container_name: local_portainer
     ports:
       - 9000:9000
     volumes:

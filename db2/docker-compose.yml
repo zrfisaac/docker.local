@@ -1,0 +1,24 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ docker-compose ]
+services:
+  db2:
+    image: ibmcom/db2:latest
+    container_name: local_db2
+    privileged: true
+    restart: always
+    volumes:
+      - "./public:/public"
+    ports:
+      - "50000:50000"
+    environment:
+      - "DB2INST1_PASSWORD=ABcd!@34"
+      - "DBNAME=SAMPLE"
+      - "LICENSE=accept"
+      - "SAMPLEDB=true"
+    networks: ["local"]
