@@ -9,7 +9,7 @@
 services:
   mssql2022:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: main_mssql2022
+    container_name: local_mssql2022
     user: root
     restart: always
     volumes:

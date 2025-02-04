@@ -11,6 +11,7 @@ services:
     image: postgres:14
     container_name: local_postgres14
     environment:
+      POSTGRES_DB: "debug"
       POSTGRES_PASSWORD: "ABcd!@34"
     volumes:
       - "./public:/public"
