@@ -15,7 +15,7 @@
 services:
   oracle21:
     image: container-registry.oracle.com/database/express:21.3.0-xe
-    container_name: main_oracle21
+    container_name: local_oracle21
     restart: always
     volumes:
       - "./public:/public"
@@ -24,5 +24,4 @@ services:
     environment:
       - "ORACLE_PWD=ABcd!@34"
       - "ORACLE_CHARACTERSET=AL32UTF8"
-    #network_mode: "host"
     networks: ["local"]

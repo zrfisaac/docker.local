@@ -8,4 +8,4 @@
 
 # [ bash ]
 command -v sudo >/dev/null 2>&1 && sudo="sudo" || sudo=""
-$sudo docker exec -it main_oracle sqlplus / as sysdba
+$sudo docker exec -it local_oracle21 sqlplus / as sysdba
