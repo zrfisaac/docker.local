@@ -28,9 +28,13 @@
 .xsession-*
 .Xauthority
 .wine
+data
+data/
 docker/*/
 trash/*/
 virtualbox/*/
+public
+public/
 webapps
 webapps/
 

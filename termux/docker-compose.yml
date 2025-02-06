@@ -1,0 +1,26 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ docker-compose ]
+services:
+  termux:
+    image: termux/termux-docker
+    container_name: local_termux
+    privileged: true
+    restart: always
+    volumes:
+      - "./public:/public"
+    networks: ["local"]
+    command: ["tail", "-f", "/dev/null"]
+    #command: ["/bin/sh", "-c", "id debug || (useradd -m debug && echo 'debug:ABcd!@34' | chpasswd); su - debug -c 'tail -f /dev/null'"]
+    #command: ["/bin/sh", "-c", "[ -d /data/data/com.termux/files/home/debug ] || (mkdir -p /data/data/com.termux/files/home/debug && echo 'debug:ABcd!@34' | chpasswd); su - debug -c 'exec sh'"]
+# mkdir -p /data/data/com.termux/files/home/debug
+# echo "debug:x:1000:1000::/data/data/com.termux/files/home/debug:/bin/sh" >> /etc/passwd
+# chown -R 1000:1000 /data/data/com.termux/files/home/debug
+# chmod -R 775 /data/data/com.termux/files/home/debug
+# su - debug
+# termux-change-repo

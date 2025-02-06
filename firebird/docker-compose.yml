@@ -1,0 +1,26 @@
+# [ zrfisaac ]
+
+# [ about ]
+# - author : Isaac Caires
+# . - email : zrfisaac@gmail.com
+# . - site : zrfisaac.github.io
+
+# [ docker-compose ]
+services:
+  firebird:
+    image: firebirdsql/firebird
+    container_name: local_firebird
+    privileged: true
+    restart: always
+    volumes:
+      - "./public:/public"
+      - "./data:/var/lib/firebird/data"
+    ports:
+      - "3050:3050"
+    environment:
+      - "FIREBIRD_ROOT_PASSWORD=masterkey"
+      - "FIREBIRD_USER=debug"
+      - "FIREBIRD_PASSWORD=ABcd!@34"
+      - "FIREBIRD_DATABASE=debug.fdb"
+      - "FIREBIRD_DATABASE_DEFAULT_CHARSET=UTF8"
+    networks: ["local"]
